@@ -13,11 +13,11 @@ from os import path
 
 from beancount.utils import table
 from beanreport.reports import html_formatter
+from beanreport.reports import version
 from beancount.parser import options
 from beancount.core import realization
 from beancount.core import prices
 from beancount.core import display_context
-from beancount.parser import version
 
 
 class ReportError(Exception):

@@ -20,7 +20,7 @@ from beanreport.reports import balance_reports
 from beanreport.reports import holdings_reports
 from beancount.utils import file_utils
 from beancount.utils import misc_utils
-from beancount.parser import version
+from beanreport.reports import version
 
 
 def get_all_reports():

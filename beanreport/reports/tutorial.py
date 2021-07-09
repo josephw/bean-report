@@ -7,8 +7,7 @@ import logging
 from os import path
 
 from beanreport.utils import test_utils
-from beancount.parser import version
-from beanreport.reports import report
+from beanreport.reports import version
 
 
 # pylint: disable=bad-whitespace
