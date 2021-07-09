@@ -9,7 +9,7 @@ from beancount.core.amount import A
 from beancount.core import realization
 from beancount.core import position
 from beancount.core import data
-from beancount.reports import journal_text
+from beanreport.reports import journal_text
 from beancount import loader
 
 

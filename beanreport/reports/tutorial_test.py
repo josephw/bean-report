@@ -7,8 +7,8 @@ import tempfile
 from os import path
 import unittest
 
-from beancount.utils import test_utils
-from beancount.reports import tutorial
+from beanreport.utils import test_utils
+from beanreport.reports import tutorial
 
 
 class TestTutorial(test_utils.TestCase):

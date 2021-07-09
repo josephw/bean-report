@@ -14,15 +14,15 @@ import textwrap
 
 from beancount import loader
 from beancount.ops import validation
-from beancount.reports import base
+from beanreport.reports import base
 from beancount.utils import table
-from beancount.reports import misc_reports
-from beancount.reports import balance_reports
-from beancount.reports import journal_reports
-from beancount.reports import holdings_reports
-from beancount.reports import export_reports
-from beancount.reports import price_reports
-from beancount.reports import convert_reports
+from beanreport.reports import misc_reports
+from beanreport.reports import balance_reports
+from beanreport.reports import journal_reports
+from beanreport.reports import holdings_reports
+from beanreport.reports import export_reports
+from beanreport.reports import price_reports
+from beanreport.reports import convert_reports
 from beancount.utils import file_utils
 from beancount.utils import misc_utils
 from beancount.parser import version

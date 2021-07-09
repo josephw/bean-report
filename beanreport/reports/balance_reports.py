@@ -5,8 +5,8 @@ __license__ = "GNU GPLv2"
 
 import re
 
-from beancount.reports import base
-from beancount.reports import tree_table
+from beanreport.reports import base
+from beanreport.reports import tree_table
 from beancount.core import realization
 from beancount.core import display_context
 from beancount.core import convert

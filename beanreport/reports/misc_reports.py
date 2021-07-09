@@ -9,9 +9,9 @@ import io
 import textwrap
 import functools
 
-from beancount.reports import base
+from beanreport.reports import base
 from beancount.utils import table
-from beancount.reports import tree_table
+from beanreport.reports import tree_table
 from beancount.parser import printer
 from beancount.parser import options
 from beancount.core import display_context

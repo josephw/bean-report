@@ -12,7 +12,7 @@ import subprocess
 from setuptools import setup, find_packages, Extension
 
 # Read the version.
-with open("beancount/VERSION") as version_file:
+with open("beanreport/VERSION") as version_file:
     version = version_file.read().strip()
 assert isinstance(version, str)
 
@@ -38,9 +38,8 @@ setup(name="bean-report",
       packages=find_packages(),
 
       package_data = {
-          'beancount': ['VERSION'],
-          'beancount.reports': ['*.html'],
-          'beancount.utils.file_type_testdata': ['*'],
+          'beanreport': ['VERSION'],
+          'beanreport.reports': ['*.html'],
       },
 
       install_requires = [
@@ -53,7 +52,8 @@ setup(name="bean-report",
 
       entry_points = {
           'console_scripts': [
-              'bean-report = beancount.reports.report:main',
+              'bean-report = beanreport.reports.report:main',
+              'bean-report.new = beanreport.reports.report:main',
           ]
       },
 

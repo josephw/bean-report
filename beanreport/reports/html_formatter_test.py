@@ -3,7 +3,7 @@ __license__ = "GNU GPLv2"
 
 import unittest
 
-from beancount.reports import html_formatter
+from beanreport.reports import html_formatter
 from beancount.core import data
 from beancount.core import inventory
 from beancount.core import display_context

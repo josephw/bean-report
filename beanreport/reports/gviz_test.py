@@ -5,7 +5,7 @@ import unittest
 import datetime
 import random
 
-from beancount.reports import gviz
+from beanreport.reports import gviz
 
 
 class TestGviz(unittest.TestCase):

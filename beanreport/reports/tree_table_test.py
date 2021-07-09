@@ -7,8 +7,8 @@ import unittest
 from beancount import loader
 from beancount.core import realization
 from beancount.core import display_context
-from beancount.reports import tree_table
-from beancount.reports import html_formatter
+from beanreport.reports import tree_table
+from beanreport.reports import html_formatter
 
 
 class TestActiveAccounts(unittest.TestCase):

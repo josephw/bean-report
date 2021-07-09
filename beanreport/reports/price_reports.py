@@ -6,9 +6,9 @@ __license__ = "GNU GPLv2"
 import datetime
 import re
 
-from beancount.reports import base
+from beanreport.reports import base
 from beancount.utils import table
-from beancount.reports import gviz
+from beanreport.reports import gviz
 from beancount.parser import printer
 from beancount.core import data
 from beancount.core import amount

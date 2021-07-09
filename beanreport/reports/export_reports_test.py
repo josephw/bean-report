@@ -6,7 +6,7 @@ import functools
 
 from beancount.core.number import D
 from beancount.core import getters
-from beancount.reports import export_reports
+from beanreport.reports import export_reports
 from beancount.ops import holdings
 from beancount import loader
 

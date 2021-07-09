@@ -4,8 +4,8 @@ __license__ = "GNU GPLv2"
 import io
 import unittest
 
-from beancount.reports import misc_reports
-from beancount.reports import base_test
+from beanreport.reports import misc_reports
+from beanreport.reports import base_test
 from beancount.parser import options
 from beancount import loader
 

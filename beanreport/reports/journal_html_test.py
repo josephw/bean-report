@@ -9,8 +9,8 @@ from beancount import loader
 from beancount.core import realization
 from beancount.core import data
 from beancount.core import display_context
-from beancount.reports import html_formatter
-from beancount.reports import journal_html
+from beanreport.reports import html_formatter
+from beanreport.reports import journal_html
 
 
 class TestJournalRender(unittest.TestCase):

@@ -5,7 +5,7 @@ import unittest
 import io
 
 from beancount.core.number import Decimal
-from beancount.reports import holdings_reports
+from beanreport.reports import holdings_reports
 from beancount.utils import table
 from beancount.ops import holdings
 from beancount import loader

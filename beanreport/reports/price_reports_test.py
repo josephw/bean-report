@@ -3,12 +3,12 @@ __license__ = "GNU GPLv2"
 
 import unittest
 
-from beancount.reports import journal_reports
-from beancount.reports import base_test
+from beanreport.reports import misc_reports
+from beanreport.reports import base_test
 from beancount.parser import options
 
 
-class TestJournalReports(unittest.TestCase):
+class TestMiscReports(unittest.TestCase):
 
     def test_all_reports_empty(self):
         # Test rendering all reports from empty list of entries.
@@ -16,7 +16,7 @@ class TestJournalReports(unittest.TestCase):
         errors = []
         options_map = options.OPTIONS_DEFAULTS.copy()
 
-        for report_, format_ in base_test.iter_reports(journal_reports.__reports__):
+        for report_, format_ in base_test.iter_reports(misc_reports.__reports__):
             output = report_.render(entries, errors, options_map, format_)
             self.assertEqual(options.OPTIONS_DEFAULTS, options_map)
             self.assertTrue(isinstance(output, str))

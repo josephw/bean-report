@@ -3,9 +3,9 @@
 __copyright__ = "Copyright (C) 2014-2016  Martin Blais"
 __license__ = "GNU GPLv2"
 
-from beancount.reports import base
-from beancount.reports import journal_html
-from beancount.reports import journal_text
+from beanreport.reports import base
+from beanreport.reports import journal_html
+from beanreport.reports import journal_text
 from beancount.core import data
 from beancount.core import realization
 from beancount.utils import misc_utils

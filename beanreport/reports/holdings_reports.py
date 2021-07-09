@@ -17,7 +17,7 @@ from beancount.core import convert
 from beancount.ops import holdings
 from beancount.ops import summarize
 from beancount.utils import table
-from beancount.reports import base
+from beanreport.reports import base
 
 
 # A field spec that renders all fields.

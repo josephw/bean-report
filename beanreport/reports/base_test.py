@@ -10,7 +10,7 @@ import io
 from beancount.core.number import D
 from beancount.core import realization
 from beancount.core import display_context
-from beancount.reports import base
+from beanreport.reports import base
 from beancount.utils import table
 from beancount.parser import options
 from beancount import loader

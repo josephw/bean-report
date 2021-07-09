@@ -4,9 +4,9 @@ __license__ = "GNU GPLv2"
 from os import path
 import unittest
 
-from beancount.utils import test_utils
-from beancount.reports import report
-from beancount.reports import base
+from beanreport.utils import test_utils
+from beanreport.reports import report
+from beanreport.reports import base
 
 
 class TestHelpReports(test_utils.TestCase):

@@ -6,9 +6,9 @@ __license__ = "GNU GPLv2"
 import logging
 from os import path
 
-from beancount.utils import test_utils
+from beanreport.utils import test_utils
 from beancount.parser import version
-from beancount.reports import report
+from beanreport.reports import report
 
 
 # pylint: disable=bad-whitespace
