@@ -13,7 +13,6 @@ import sys
 import textwrap
 
 from beancount import loader
-from beancount.ops import validation
 from beanreport.reports import base
 from beancount.utils import table
 from beanreport.reports import balance_reports

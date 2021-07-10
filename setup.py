@@ -6,10 +6,7 @@ __copyright__ = "Copyright (C) 2008-2011, 2013-2016  Martin Blais"
 __license__ = "GNU GPLv2"
 
 
-import re
-import subprocess
-
-from setuptools import setup, find_packages, Extension
+from setuptools import setup, find_packages
 
 # Read the version.
 with open("beanreport/VERSION") as version_file:
