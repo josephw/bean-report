@@ -41,7 +41,7 @@ setup(name="bean-report",
 
       install_requires = [
           'pyparsing<3,>=2.4.2',
-          'beancount>=2.3,<3',
+          'beancount>=3.0.0.dev0',
 
           # Testing support now uses the pytest module.
           'pytest',
