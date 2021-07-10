@@ -203,7 +203,6 @@ def main(argv=None):
         print(get_list_report_string())
         return
 
-    is_check = False
     if hasattr(args, 'report_class'):
         # Open output file and guess file format.
         outfile = open(args.output, 'w') if args.output else sys.stdout
@@ -213,7 +212,6 @@ def main(argv=None):
         chosen_report = args.report_class(args, parser)
         if chosen_report is None:
             parser.error("Unknown report")
-        is_check = isinstance(chosen_report, misc_reports.ErrorReport)
 
         # Verify early that the format is supported, in order to avoid parsing the
         # input file if we need to bail out.
@@ -221,9 +219,6 @@ def main(argv=None):
         if args.format and args.format not in supported_formats:
             parser.error("Unsupported format '{}' for {} (available: {})".format(
                 args.format, chosen_report.names[0], ','.join(supported_formats)))
-
-    # Force hardcore validations, just for check.
-    extra_validations = (validation.HARDCORE_VALIDATIONS if is_check else None)
 
     logging.basicConfig(level=logging.INFO if args.timings else logging.WARNING,
                         format='%(levelname)-8s: %(message)s')
@@ -233,8 +228,7 @@ def main(argv=None):
     with misc_utils.log_time('beancount.loader (total)', logging.info):
         entries, errors, options_map = loader.load_file(args.filename,
                                                         log_timings=logging.info,
-                                                        log_errors=errors_file,
-                                                        extra_validations=extra_validations)
+                                                        log_errors=errors_file)
 
     if hasattr(args, 'report_class'):
         # Create holdings list.
