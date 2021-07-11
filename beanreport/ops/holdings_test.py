@@ -10,7 +10,7 @@ from beancount.core.number import ZERO
 from beancount.core.amount import A
 from beancount.core import position
 from beancount.core import data
-from beancount.ops import holdings
+from beanreport.ops import holdings
 from beancount.core import prices
 from beancount import loader
 
@@ -94,26 +94,6 @@ class TestHoldings(unittest.TestCase):
                            for holding in expected_values
                            if holding[0].startswith('Assets')]
         self.assertEqual(expected_values, holdings_list)
-
-    @loader.load_doc()
-    def test_get_final_holdings__check_no_aggregates(self, entries, _, __):
-        """
-        plugin "beancount.plugins.unrealized" "Unrealized"
-
-        2013-01-01 open Assets:Investment   HOOL
-        2013-01-01 open Assets:Cash         USD
-
-        2013-04-01 *
-          Assets:Investment             15 HOOL {518.73 USD}
-          Assets:Cash
-
-        2013-06-01 price HOOL  600.00 USD
-        """
-        holdings_list = holdings.get_final_holdings(entries)
-
-        # Ensure that there is no Unrealized balance or sub-account.
-        self.assertEqual({'Assets:Cash', 'Assets:Investment'},
-                         set(holding.account for holding in holdings_list))
 
     @loader.load_doc()
     def test_get_final_holdings_with_prices(self, entries, _, __):

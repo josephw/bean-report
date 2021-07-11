@@ -72,7 +72,7 @@ def get_final_holdings(entries, included_account_types=None, price_map=None, dat
       A list of dicts, with the following fields:
     """
     # Realize the accounts into a tree (because we want the positions by-account).
-    root_account = realization.realize(simple_entries)
+    root_account = realization.realize(entries)
 
     # For each account, look at the list of positions and build a list.
     holdings = []

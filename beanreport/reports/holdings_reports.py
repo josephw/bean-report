@@ -14,7 +14,7 @@ from beancount.parser import printer
 from beancount.parser import options
 from beancount.core import prices
 from beancount.core import convert
-from beancount.ops import holdings
+from beanreport.ops import holdings
 from beancount.ops import summarize
 from beancount.utils import table
 from beanreport.reports import base

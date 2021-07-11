@@ -7,7 +7,7 @@ import io
 from beancount.core.number import Decimal
 from beanreport.reports import holdings_reports
 from beancount.utils import table
-from beancount.ops import holdings
+from beanreport.ops import holdings
 from beancount import loader
 
 
