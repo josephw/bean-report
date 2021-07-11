@@ -1,1 +1,1 @@
-beancount==2.3.4
+git+https://github.com/beancount/beancount@master
