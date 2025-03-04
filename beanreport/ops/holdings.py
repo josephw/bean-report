@@ -375,7 +375,7 @@ def convert_to_currency(price_map, target_currency, holdings_list):
             # fields..
             _, rate = prices.get_latest_price(price_map, base_quote)
             if rate is not None:
-                new_holding = misc_utils.map_namedtuple_attributes(
+                new_holding = _map_namedtuple_attributes(
                     convert_fields,
                     lambda number, r=rate: number if number is None else number * r,
                     holding)
@@ -385,7 +385,7 @@ def convert_to_currency(price_map, target_currency, holdings_list):
                 # Could not get the rate... clear every field and set the cost
                 # currency to None. This enough marks the holding conversion as
                 # a failure.
-                new_holding = misc_utils.map_namedtuple_attributes(
+                new_holding = _map_namedtuple_attributes(
                     convert_fields, lambda number: None, holding)
                 new_holding = new_holding._replace(cost_currency=None)
 
@@ -490,3 +490,19 @@ def holding_to_posting(holding):
              if holding.price_number
              else None)
     return data.Posting(holding.account, position_.units, position_.cost, price, None, None)
+
+def _map_namedtuple_attributes(attributes, mapper, object_):
+    """Map the value of the named attributes of object by mapper.
+
+    Args:
+      attributes: A sequence of string, the attribute names to map.
+      mapper: A callable that accepts the value of a field and returns
+        the new value.
+      object_: Some namedtuple object with attributes on it.
+    Returns:
+      A new instance of the same namedtuple with the named fields mapped by
+      mapper.
+    """
+    return object_._replace(
+        **{attribute: mapper(getattr(object_, attribute)) for attribute in attributes}
+    )
